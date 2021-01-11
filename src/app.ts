@@ -1,13 +1,12 @@
-interface Pizza {
-  name: string;
+interface Sizes{
   sizes: string[];
+}
+
+interface Pizza extends Sizes{
+  name: string;
   getAvailableSizes():string[];
 }
 
-interface Pizzas {
-  data:Pizza[]
-}
-type getAvailableSizes =()=>string[]
 let pizza: Pizza;
 
 function createPizza(name: string, sizes: string[]): Pizza {
