@@ -1,8 +1,9 @@
-function orderError(error:string):never{
-  throw new Error(error);
-  //never going to return a value
-  console.log("error")
+let coupon:string | null = 'pizza25';
+
+function removeCoupon():void{
+  coupon = null;
 }
 
-orderError("something went wrong")
-console.log("error")
+console.log(coupon);
+removeCoupon();
+console.log(coupon)
