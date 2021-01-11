@@ -1,2 +1,12 @@
-let pizza:[string,number,boolean];
-pizza = ["Pepperoni", 20,true];
+type Size = "small" | "medium" | "large";
+type Callback = (size: Size) => void;
+
+let pizzaSize: Size;
+
+const selectSize: Callback = (x) => {
+  pizzaSize = x;
+  console.log(pizzaSize)
+};
+
+selectSize("medium");
+
